@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile | FrontEnd Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar-container">
+        <div class="logo">
+          <h1><a href="#">Galih</a></h1>
+        </div>
+        <section class="menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Article">Article</a></li>
+            <li class="dropdown">
+              <a href="#">Skill</a>
+              <div class="dropdown-content">
+                <a href="#html">HTML</a>
+                <a href="#css">CSS</a>
+                <a href="#js">JavaScript</a>
+                <a href="#github">Github</a>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </nav>
+      <section class="hero">
+        <div class="hero-inner">
+          <h1>My Website</h1>
+          <h2>Look at this website and bask in its amazing glory!</h2>
+        </div>
+      </section>
+    </header>
+    <main>
+      <h1 class="me" id="About">About</h1>
+      <section class="container">
+        <div class="left">
+          <p>
+            Hello, my name is <span>Mochamad Galih.</span> I have 3 years of
+            work experience at PT Gajah Angkasa Perkasa. Currently, I am
+            focusing on developing my programming skills by taking courses at
+            Dicoding online learning platform. I have a great interest in
+            technology and want to develop my career in this field. Thank you
+            for the opportunity to introduce myself.
+          </p>
+        </div>
+
+        <div class="right">
+          <lottie-player
+            src="https://lottie.host/3e045740-83b4-4696-9e18-985073b1befc/Qrdp1L55PB.json"
+            background="#FFFFFF"
+            speed="1"
+            loop
+            autoplay
+            direction="1"
+            mode="normal"
+          ></lottie-player>
+        </div>
+      </section>
+      <h1 class="article" id="Article">Article</h1>
+      <section class="article-container">
+        <div class="card">
+          <article>
+            <h1>Berita Terkini</h1>
+            <img src="./assets/matthew-guay-Q7wDdmgCBFg-unsplash.jpg" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Recusandae facere ratione odio vel? Suscipit iure molestias, ut
+              totam optio officia! Ex debitis architecto beatae id repellat
+              fugiat distinctio dolorem illum.
+            </p>
+          </article>
+        </div>
+        <div class="card">
+          <article>
+            <h1>Berita Terkini</h1>
+            <img src="./assets/matthew-guay-Q7wDdmgCBFg-unsplash.jpg" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Recusandae facere ratione odio vel? Suscipit iure molestias, ut
+              totam optio officia! Ex debitis architecto beatae id repellat
+              fugiat distinctio dolorem illum.
+            </p>
+          </article>
+        </div>
+        <div class="card">
+          <article>
+            <h1>Berita Terkini</h1>
+            <img src="./assets/matthew-guay-Q7wDdmgCBFg-unsplash.jpg" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Recusandae facere ratione odio vel? Suscipit iure molestias, ut
+              totam optio officia! Ex debitis architecto beatae id repellat
+              fugiat distinctio dolorem illum.
+            </p>
+          </article>
+        </div>
+      </section>
+      <h1 class="skill" id="Skill">Skill</h1>
+      <section class="skill-container">
+        <div class="card-skill">
+          <p id="html">HTML</p>
+          <div class="bar-html">90%</div>
+          <p id="css">CSS</p>
+          <div class="bar-css">50%</div>
+          <p id="js">Javascript</p>
+          <div class="bar-js">75%</div>
+          <p id="github">Github</p>
+          <div class="bar-github">80%</div>
+        </div>
+        <aside>
+          <form class="form">
+            <div class="title">Contact us</div>
+            <input type="text" placeholder="Your email" class="input" />
+            <textarea placeholder="Your message"></textarea>
+
+            <button>Submit</button>
+          </form>
+        </aside>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Galih. Hak Cipta Dilindungi</p>
+      <div class="footer-sosmed">
+        <ul>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/mochamad-galih-sulistio-pratama-2766b4253/"
+              >Linkedln</a
+            >
+          </li>
+          <li>
+            <a href="https://www.instagram.com/_mchmdgalih/">Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+  <script
+    src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+  >
+       const dropdown = document.querySelector(".dropdown");
+    dropdown.addEventListener("click", function () {
+      const dropdownContent = this.querySelector(".dropdown-content");
+      dropdownContent.classList.toggle("show");
+    });
+
+    window.addEventListener("click", function (event) {
+      if (!event.target.matches(".dropdown")) {
+        const dropdowns = document.querySelectorAll(".dropdown-content");
+        dropdowns.forEach(function (dropdownContent) {
+          if (dropdownContent.classList.contains("show")) {
+            dropdownContent.classList.remove("show");
+          }
+        });
+      }
+    });
+  </script>
+</html>
