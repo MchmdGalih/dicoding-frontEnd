@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Profile | FrontEnd Developer</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -153,24 +153,6 @@
       </div>
     </footer>
   </body>
-  <script
-    src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
-  >
-       const dropdown = document.querySelector(".dropdown");
-    dropdown.addEventListener("click", function () {
-      const dropdownContent = this.querySelector(".dropdown-content");
-      dropdownContent.classList.toggle("show");
-    });
-
-    window.addEventListener("click", function (event) {
-      if (!event.target.matches(".dropdown")) {
-        const dropdowns = document.querySelectorAll(".dropdown-content");
-        dropdowns.forEach(function (dropdownContent) {
-          if (dropdownContent.classList.contains("show")) {
-            dropdownContent.classList.remove("show");
-          }
-        });
-      }
-    });
-  </script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="./script/index.js"></script>
 </html>
