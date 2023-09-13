@@ -218,6 +218,7 @@ ul li a:hover {
   color: #fff;
 }
 aside {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
